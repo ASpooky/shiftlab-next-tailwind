@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700&family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@400;500&display=swap');
+
+:root {
+  --yellow: linear-gradient(180deg, #f8d49a -146.42%, #fad79d -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #bb67ff 0%, #c484f3 100%);
+  --pink: #ff919d;
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: #f799a354;
+}
+
+.Project {
+  background: linear-gradient(225deg, #acb2fb, #eb7496);
+  font-family: 'Inter', sans-serif;
+}
+
+.Glass {
+  display: grid;
+  border-radius: 2rem;
+  background-color: var(--glass);
+  overflow: hidden;
+  margin: 10px 10px 20px 10px;
+  padding: 10px 0;
+  box-shadow: 10px 10px 15px -10px;
+}
+
+.DashboardFont {
+  font-family: 'Noto Sans JP', sans-serif;
+  font: bold;
+  font-size: 1.1rem;
+}
+
+.Grid {
+  display: grid;
+  grid-template-rows: 200px auto;
+}
+
+.min-w-half {
+  min-width: 50%;
+}
+.min-h-half {
+  min-height: 50%;
+}
+.min-w-modal {
+  min-width: 200px;
+}
+.min-w-eighty {
+  min-width: 80%;
+}
+.max-w-eighty {
+  max-width: 80%;
+}
+.min-h-eighty {
+  min-height: 80%;
+}
+.max-h-eighty {
+  max-height: 80%;
+}
+
+.max-w-custom {
+  max-width: 100rem;
+}
+
+.input-form {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  outline-style: none;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  background: #fcfdfe;
+}
