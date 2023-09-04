@@ -21,7 +21,7 @@ type SalaryElement = {
   }[]
 }
 
-function index() {
+const StaticBoard = () => {
   const { shiftsState, workspaceState, isLogin } = useLoginContext()
   //収入記録用
   const [salary, setSalary] = useState({
@@ -161,4 +161,4 @@ function index() {
   )
 }
 
-export default index
+export default StaticBoard
