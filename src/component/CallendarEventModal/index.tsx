@@ -44,9 +44,7 @@ export const EventModal = () => {
         start_time: data.start_time,
         end_time: data.end_time,
       })
-      console.log(data)
       setShowEventModal(false)
-      console.log(shiftsState)
     }
   }
 

@@ -58,7 +58,6 @@ function Workspace() {
   })
 
   const submitWorkspaceHandler = async (data: WorkspaceForm) => {
-    console.log(data)
     createWorkspaceMutation.mutate(data)
     reset()
   }

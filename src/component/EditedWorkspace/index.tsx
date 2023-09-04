@@ -35,7 +35,6 @@ function EditedWorkSpace(props: any) {
             <MdDelete
               className="hover:cursor-pointer text-2xl"
               onClick={() => {
-                console.log('clicked')
                 deleteWorkspaceMutation.mutate(Workspace.id)
               }}
             />

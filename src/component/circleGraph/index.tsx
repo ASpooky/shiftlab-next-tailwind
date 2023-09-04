@@ -35,7 +35,6 @@ const CircleGraph: React.VFC<Props> = ({ salary }) => {
     })
   })
 
-  console.log('this is yearsalary', yearSalary)
   const [viewYear, setViewYear] = useState(salary.years.length - 1)
   const { workspaceState } = useLoginContext()
   const prevYear = () => {

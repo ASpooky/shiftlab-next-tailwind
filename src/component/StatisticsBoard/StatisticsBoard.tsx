@@ -71,19 +71,10 @@ const StaticBoard = () => {
   }
 
   useEffect(() => {
-    console.log('reload staticboard')
-
     //以下収入計算
     const outPutSalary: SalaryElement[] = []
 
-    console.log(
-      'shiftstate is',
-      shiftsState,
-      shiftsState.filter((shift) => shift.id === 0).length
-    )
-
     if (shiftsState.filter((shift) => shift.id === 0).length === 0) {
-      console.log('recalcurate', shiftsState)
       shiftsState.map((shift) => {
         const start = dayjs(shift.end_time)
         const diff = start.diff(dayjs(shift.start_time), 'hour', true)
@@ -121,10 +112,8 @@ const StaticBoard = () => {
                     ?.salary!
               )
           )
-        console.log('processings is', outPutSalary)
       })
       const final = { years: outPutSalary }
-      console.log('final is', outPutSalary)
       if (isLogin) {
         setSalary(final)
       } else {

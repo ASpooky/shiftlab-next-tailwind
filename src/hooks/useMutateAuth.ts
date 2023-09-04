@@ -44,7 +44,6 @@ export const useMutateAuth = () => {
               ])
             } else {
               setWorkspaceState(response.data)
-              console.log('workspacestate 更新')
             }
           })
           .catch(function (error) {
@@ -55,9 +54,7 @@ export const useMutateAuth = () => {
             withCredentials: true,
           })
           .then(function (response) {
-            console.log('fetch成功', response.data)
             if (response.data.length === 0) {
-              console.log('未登録')
               setShiftsState([
                 {
                   id: 0,

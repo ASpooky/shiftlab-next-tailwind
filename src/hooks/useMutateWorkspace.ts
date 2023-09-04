@@ -24,7 +24,6 @@ export const useMutateWorkspace = () => {
       ),
     {
       onSuccess: (response) => {
-        console.log('職場登録成功')
         if (
           workspaceState.filter((Workspace) => Workspace.id !== 0).length === 0
         ) {
@@ -49,9 +48,7 @@ export const useMutateWorkspace = () => {
         workspace
       ),
     {
-      onSuccess: () => {
-        console.log('職場更新成功')
-      },
+      onSuccess: () => {},
       onError: (err: any) => {
         if (err.response.data.message) {
           switchErrorHandling(err.response.data.message)
@@ -66,7 +63,6 @@ export const useMutateWorkspace = () => {
       await axios.delete(`${process.env.REACT_APP_API_URL}/workspaces/${id}`),
     {
       onSuccess: (_, variables) => {
-        console.log('職場削除成功', variables)
         if (
           workspaceState.filter((Workspace) => Workspace.id !== variables)
             .length === 0

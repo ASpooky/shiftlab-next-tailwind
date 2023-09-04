@@ -53,9 +53,8 @@ export const EditedEventModal = () => {
         created_at: shift.created_at,
         update_at: shift.update_at,
       })
-      console.log(data)
+
       setShowEditedEventModal(false)
-      console.log(shiftsState)
     }
   }
 
@@ -175,7 +174,6 @@ export const EditedEventModal = () => {
             <MdDelete
               className="hover:cursor-pointer text-2xl"
               onClick={() => {
-                console.log('clicked')
                 setShowEditedEventModal(false)
                 deleteShiftMutation.mutate(shift.id)
               }}

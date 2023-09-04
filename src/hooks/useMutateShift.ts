@@ -16,7 +16,6 @@ export const useMutateShift = () => {
       ),
     {
       onSuccess: (response) => {
-        console.log('シフト登録成功')
         if (shiftsState.filter((Shift) => Shift.id !== 0).length === 0) {
           setShiftsState([response.data])
         } else {
@@ -40,7 +39,6 @@ export const useMutateShift = () => {
       ),
     {
       onSuccess: (res) => {
-        console.log('シフト更新成功')
         setShiftsState([
           ...shiftsState.filter((shift) => shift.id !== res.data.id),
           res.data,
@@ -60,7 +58,6 @@ export const useMutateShift = () => {
       await axios.delete(`${process.env.REACT_APP_API_URL}/shifts/${id}`),
     {
       onSuccess: (_, variables) => {
-        console.log('シフト削除成功', variables)
         if (
           shiftsState.filter((Shift) => Shift.id !== variables).length === 0
         ) {

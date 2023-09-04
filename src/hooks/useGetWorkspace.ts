@@ -9,15 +9,11 @@ export const useGetWorkspaces = async () => {
       withCredentials: true,
     })
     .then(function (response) {
-      console.log('fetch成功', response.data)
       if (response.data.length === 0) {
-        console.log('未登録')
       } else {
         setWorkspaceState(response.data)
       }
       return response.data
     })
-    .catch(function (error) {
-      console.log(error)
-    })
+    .catch(function (error) {})
 }
