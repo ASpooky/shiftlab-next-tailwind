@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     axios.defaults.withCredentials = true
     const getCsrfToken = async () => {
+      console.log(`${process.env.REACT_APP_API_URL}`)
       const { data } = await axios.get<CsrfToken>(
         `${process.env.REACT_APP_API_URL}/csrf`
       )
