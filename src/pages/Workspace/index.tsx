@@ -17,7 +17,7 @@ interface WorkspaceForm {
   night_salary: number
 }
 
-function index() {
+function Workspace() {
   const { isLogin, workspaceState, viewWorkspace, setViewWorkspace } =
     useLoginContext()
   const router = useRouter()
@@ -253,4 +253,4 @@ function index() {
   )
 }
 
-export default index
+export default Workspace
