@@ -3,8 +3,8 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Salary } from '../../Data/Data'
 import { useLoginContext } from '../../context/LoginContext'
-import ViewSalary from '../../component/viewSalary'
-import CircleGraph from '../../component/circleGraph'
+import ViewSalary from '../viewSalary'
+import CircleGraph from '../circleGraph'
 import dayjs from 'dayjs'
 
 type SalaryElement = {

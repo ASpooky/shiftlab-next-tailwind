@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next'
 import Calendar from '../component/calendar'
-import StaticsBoard from '../component/StatisticsBoard'
+import StaticsBoard from '../component/StatisticsBoard/StatisticsBoard'
 
 const Home: NextPage = () => {
   return (

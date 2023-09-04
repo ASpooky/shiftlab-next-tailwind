@@ -5,7 +5,7 @@ import { initSalary } from '../..//Data/Data'
 import { useEffect } from 'react'
 import { useLoginContext } from '../../context/LoginContext'
 import { useRouter } from 'next/router'
-import StaticBoard from '../../component/StatisticsBoard'
+import StaticBoard from '../../component/StatisticsBoard/StatisticsBoard'
 
 const Home: NextPage = () => {
   const { isLogin } = useLoginContext()
