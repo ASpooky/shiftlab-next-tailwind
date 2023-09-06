@@ -21,7 +21,7 @@ type SalaryElement = {
   }[]
 }
 
-const StaticBoard = () => {
+const StaticBoard = React.memo(() => {
   const { shiftsState, workspaceState, isLogin } = useLoginContext()
   //収入記録用
   const [salary, setSalary] = useState({
@@ -148,6 +148,6 @@ const StaticBoard = () => {
       <CircleGraph salary={salary} />
     </div>
   )
-}
+})
 
 export default StaticBoard

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCalendarContext } from '../../context/CalendarContext'
 import { getMonth } from '../../utils/handleDate'
 import { CalendarHeader } from './calendarHeader'
@@ -7,7 +7,7 @@ import { EventModal } from '../CallendarEventModal'
 import { EditedEventModal } from '../EditedEventModal'
 import { Week } from './week'
 
-const Calendar: React.FC = () => {
+const Calendar: React.FC = React.memo(() => {
   const [currentMonth, setCurrentMonth] = useState(getMonth())
   const { monthIndex, showEventModal, showEditedEventModal } =
     useCalendarContext()
@@ -28,6 +28,6 @@ const Calendar: React.FC = () => {
       </div>
     </>
   )
-}
+})
 
 export default Calendar
