@@ -7,7 +7,7 @@ import { EventModal } from '../CallendarEventModal'
 import { EditedEventModal } from '../EditedEventModal'
 import { Week } from './week'
 
-const Calendar: React.FC = React.memo(() => {
+const Calendar: React.FC = () => {
   const [currentMonth, setCurrentMonth] = useState(getMonth())
   const { monthIndex, showEventModal, showEditedEventModal } =
     useCalendarContext()
@@ -28,6 +28,6 @@ const Calendar: React.FC = React.memo(() => {
       </div>
     </>
   )
-})
+}
 
 export default Calendar
